@@ -1,5 +1,11 @@
 # Grapesjs Typography Fonts
 
+Customize the font family list for typography
+
+<p align="center">
+  <img src="demo.png" alt="demo.png">
+</p>
+
 [DEMO](https://codepen.io/wenfzhao/pen/ExdJvqY)
 
 ### HTML

@@ -1,0 +1,24 @@
+{
+  "name": "grapesjs-typography-fonts",
+  "version": "1.0.0",
+  "description": "Grapesjs Typography Fonts",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenfzhao/grapesjs-typography-fonts.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin"
+  ],
+  "devDependencies": {
+    "grapesjs-cli": "^4.0.1"
+  },
+  "author": "Wen Zhao",
+  "license": "MIT"
+}

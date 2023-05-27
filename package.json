@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-typography-fonts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grapesjs Typography Fonts",
   "main": "dist/index.js",
   "repository": {

@@ -15,7 +15,7 @@ export default (editor, opts = {}) => {
      * }
      */
     fonts: [],
-    clearDefaultList: true, // remove the existing font list
+    clearDefaultList: true, // remove existing font list
   },  ...opts };
 
   const fontConfigs = options.fonts || [];

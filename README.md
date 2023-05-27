@@ -1,9 +1,6 @@
 # Grapesjs Typography Fonts
 
-[DEMO](##)
-> **Provide a live demo of your plugin**
-For a better user engagement create a simple live demo by using services like [JSFiddle](https://jsfiddle.net) [CodeSandbox](https://codesandbox.io) [CodePen](https://codepen.io) and link it here in your README (attaching a screenshot/gif will also be a plus).
-To help you in this process here below you will find the necessary HTML/CSS/JS, so it just a matter of copy-pasting on some of those services. After that delete this part and update the link above
+[DEMO](https://codepen.io/wenfzhao/pen/ExdJvqY)
 
 ### HTML
 ```html
@@ -22,6 +19,20 @@ const editor = grapesjs.init({
   fromElement: true,
   storageManager: false,
   plugins: ['grapesjs-typography-fonts'],
+  pluginsOpts: {
+    'grapesjs-typography-fonts': { 
+      fonts: [
+        {
+          label: 'Merriweather',
+          value: 'Merriweather, serif',
+          import: {
+            link: 'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap'
+          }
+        },
+      ],
+    },
+    clearDefaultList: false,
+  }
 });
 ```
 
@@ -37,14 +48,13 @@ body, html {
 ## Summary
 
 * Plugin name: `grapesjs-typography-fonts`
-* Components
-    * `component-id-1`
-    * `component-id-2`
-    * ...
-* Blocks
-    * `block-id-1`
-    * `block-id-2`
-    * ...
+* Options
+    * `fonts`: [FontOption] - list of fonts for Typography
+      * `FontOption` - font configuration option
+        * `label`
+        * `value`
+        * `import`: { link: '', style: '' }
+    * `clearDefaultList`: Boolean - remove existing font list
 
 
 
@@ -52,7 +62,8 @@ body, html {
 
 | Option | Description | Default |
 |-|-|-
-| `option1` | Description option | `default value` |
+| `fonts` | [FontOption] - list of fonts for Typography | `default []` |
+| `clearDefaultList` | remove existing font list | `default true` |
 
 
 
@@ -80,10 +91,20 @@ Directly in the browser
 <script type="text/javascript">
   var editor = grapesjs.init({
       container: '#gjs',
-      // ...
       plugins: ['grapesjs-typography-fonts'],
       pluginsOpts: {
-        'grapesjs-typography-fonts': { /* options */ }
+        'grapesjs-typography-fonts': { 
+          fonts: [
+            {
+              label: 'Merriweather',
+              value: 'Merriweather, serif',
+              import: {
+                link: 'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap'
+              }
+            },
+            ...
+          ],
+        }
       }
   });
 </script>

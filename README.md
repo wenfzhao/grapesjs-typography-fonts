@@ -51,9 +51,11 @@ body, html {
 * Options
     * `fonts`: [FontOption] - list of fonts for Typography
       * `FontOption` - font configuration option
-        * `label`
-        * `value`
-        * `import`: { link: '', style: '' }
+        * `label` - font label in the Font Family dropdown
+        * `value` - font name in the css rule
+        * `import` - import option: { link: '', style: '' }
+          * `link` - url to load the font in <link>
+          * `style` - css rules, @font-face 
     * `clearDefaultList`: Boolean - remove existing font list
 
 
@@ -62,8 +64,8 @@ body, html {
 
 | Option | Description | Default |
 |-|-|-
-| `fonts` | [FontOption] - list of fonts for Typography | `default []` |
-| `clearDefaultList` | remove existing font list | `default true` |
+| `fonts` | [`FontOption`] - list of fonts for Typography, see above for `FontOption` | `[]` |
+| `clearDefaultList` | remove existing font list | `true` |
 
 
 
